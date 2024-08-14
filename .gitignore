@@ -74,7 +74,7 @@ web_modules/
 
 # dotenv environment variable files
 .env
-.env.development.local
+#.env.development.local
 .env.test.local
 .env.production.local
 .env.local
@@ -95,8 +95,12 @@ dist
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
- public
- views
+# public
+<<<<<<< HEAD
+ 
+=======
+
+>>>>>>> 2788f9d53066482b963652c2ef87a165f0a2906c
 # vuepress build output
 .vuepress/dist
 
