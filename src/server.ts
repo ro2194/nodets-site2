@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';// Importa o dotenv para carregar variáveis de ambiente de um arquivo .env para o processo do Node.js.
 import mustache from 'mustache-express';// Importa o mustache-express, que permite usar templates Mustache com o Express.
 import path from 'path';// Importa o módulo path, que fornece utilitários para trabalhar com caminhos de arquivos e diretórios.
+import mainRoutes from './routes/index';// Importa as rotas principais da aplicação a partir de `routes/index.js` ou `index.ts`.
 
 dotenv.config();
 
@@ -18,6 +19,11 @@ server.use(express.static(path.join(__dirname, '../public')));
 // 'path.join' garante um caminho correto para 'public' em qualquer sistema.
 
 
-//Rotas 
+//routtes 
+server.use(mainRoutes);
+
+server.use((req,res)=>{
+    res.send('pagina não encotrada');
+});
 
 server.listen(process.env.PORT);// Inicia o servidor na porta definida em 'process.env.PORT'.
