@@ -8,7 +8,7 @@ dotenv.config();
 
 const server = express();
 
-server.set('view engine','mutache');// Configura o motor de visualização (view engine) do Express para usar Mustache para renderizar templates.
+server.set('view engine','mustache');// Configura o motor de visualização (view engine) do Express para usar Mustache para renderizar templates.
 server.set('views', path.join(__dirname,'views'));//Define o diretório das views.
 server.engine('mustache',mustache());// Configura o Express para usar o motor Mustache ao renderizar arquivos com a extensão .mustache.
 
