@@ -23,7 +23,7 @@ server.use(express.static(path.join(__dirname, '../public')));
 server.use(mainRoutes);
 
 server.use((req,res)=>{
-    res.send('pagina não encotrada');
+    res.status(404).send('Página não encontrada'); 
 });
 
 server.listen(process.env.PORT);// Inicia o servidor na porta definida em 'process.env.PORT'.
