@@ -8,7 +8,10 @@ const router = Router();
 // Define a rota para a página inicial, utilizando o método 'home' do PageController
 
 router.get('/', PageController.home);
-router.get('/fotos', PageController.fotos);
+router.get('/dogs', PageController.dogs);
+router.get('/cats', PageController.cats);
+router.get('/fishes', PageController.fishes);
+
 
 router.get('/search', SearchController.search); // Método para lidar com a rota de busca
 
